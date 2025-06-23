@@ -1,5 +1,2 @@
-Pillow
-exifread
-piexif
-hachoir
-requests
+# requirements.txt
+# No external dependencies required. Pure Python only.

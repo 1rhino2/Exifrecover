@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.py linguist-language=Python
+*.md linguist-language=Markdown
+*.txt linguist-language=Text
