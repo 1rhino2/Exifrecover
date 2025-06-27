@@ -3,8 +3,6 @@
 # Recovers lost or wiped EXIF and plausible metadata from images, using only built-in Python
 #
 # Usage: python exif_recovery_tool.py
-#
-# This tool is user-friendly, robust, and ready for GitHub release.
 
 import os, sys, glob, datetime, struct, hashlib, json, subprocess, urllib.request, re, webbrowser
 from collections import Counter
