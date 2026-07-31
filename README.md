@@ -1,16 +1,24 @@
 # Exifrecover
 
-Python tool to recover EXIF metadata from JPEGs when thumbnails or partial segments still exist.
+Dig EXIF and leftover metadata out of images after someone stripped them (or tried to).
+Stdlib only, no pip stuff.
 
-## Run
+Works on live APP1, orphaned `Exif\0\0` residue past SOS, XMP, PNG text/eXIf, WebP EXIF.
+Filename / brand-byte guesses are labeled as guesses so you dont mix them up with real tags.
+
+## run
 
 ```bash
-pip install -r requirements.txt
-python exifrecover.py --help
+python exif_recovery_tool.py photo.jpg
+python exif_recovery_tool.py photos/ -r -q
+python exif_recovery_tool.py photo.jpg -j -o report.json
+python exif_recovery_tool.py photo.jpg -c photo_original.jpg
+python exif_recovery_tool.py -i
+python -m unittest test_exif_recovery.py -v
 ```
 
-See repo for full CLI.
+If the EXIF was fully overwritten, this cant invent it back. It just surfaces what is still on disk.
 
-## License
+## license
 
 MIT
